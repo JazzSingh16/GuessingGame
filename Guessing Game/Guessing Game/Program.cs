@@ -12,6 +12,7 @@ namespace GuessingGame
             int guess;
             int x = 1;
             int y = 100;
+            int counter = 1;
             string input;
 
 
@@ -21,7 +22,7 @@ namespace GuessingGame
             {
                 guess = (x + y) / 2;
 
-                Console.WriteLine("Is the number {0}", guess);
+                Console.WriteLine("Guess #{0}: Is your number {1}?", counter, guess);
 
                 Console.WriteLine("h, l, or e");
 
@@ -29,10 +30,12 @@ namespace GuessingGame
                 if (input == "h")
                 {
                     x = guess + 1;
+                    counter++;
                 }
                 if (input == "l")
                 {
                     y = guess - 1;
+                    counter++;
                 }
                 if (input == "e")
                 {
